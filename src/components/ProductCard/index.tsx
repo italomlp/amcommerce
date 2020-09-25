@@ -17,6 +17,7 @@ import {
 } from './styles';
 
 type ButtonAction = {
+  key: string;
   buttonTitle: string;
   action: (_: Product) => unknown;
 };
@@ -24,7 +25,7 @@ type ButtonAction = {
 type Props = {
   product: Product;
   inCart?: boolean;
-  bottomActions?: [ButtonAction] | [ButtonAction, ButtonAction];
+  bottomActions?: ButtonAction[];
 };
 
 const ProductCard: React.FC<Props> = ({ product, inCart, bottomActions }) => {
@@ -55,10 +56,7 @@ const ProductCard: React.FC<Props> = ({ product, inCart, bottomActions }) => {
       <BuyContainer>
         {bottomActions &&
           bottomActions.map(act => (
-            <BuyButton
-              key={act.buttonTitle}
-              onPress={() => act.action(product)}
-            >
+            <BuyButton key={act.key} onPress={() => act.action(product)}>
               <BuyText>{act.buttonTitle}</BuyText>
             </BuyButton>
           ))}

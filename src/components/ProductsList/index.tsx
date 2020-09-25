@@ -16,10 +16,13 @@ type ProductWithInCartFlag = Product & {
   inCart: boolean;
 };
 
+type AvailableCardActionType = 'buy' | 'toggle_cart';
+
 type Props = {
   products: Product[];
   topComponent?: React.ReactElement;
   emptyText?: string;
+  availableCardActions?: AvailableCardActionType[];
 } & Omit<
   Partial<FlatListProps<ProductWithInCartFlag>>,
   | 'data'
@@ -33,6 +36,7 @@ const ProductsList: React.FC<Props> = ({
   products,
   topComponent: TopComponent,
   emptyText,
+  availableCardActions,
   ...rest
 }) => {
   const cart = useSelector((state: RootReducer) => state.cart.products);
@@ -59,6 +63,38 @@ const ProductsList: React.FC<Props> = ({
     [products, cart],
   );
 
+  const getProductCardActions = useCallback(
+    (product: ProductWithInCartFlag) => {
+      const actions = [
+        {
+          key: 'toggle_cart',
+          buttonTitle: product.inCart
+            ? 'Remover do carrinho'
+            : 'Adicionar ao carrinho',
+          action: toggleInCartProduct,
+        },
+        {
+          key: 'buy',
+          buttonTitle: 'Comprar',
+          action: () => {
+            if (!product.inCart) {
+              toggleInCartProduct(product);
+            }
+            navigate('Cart');
+          },
+        },
+      ];
+      if (availableCardActions) {
+        return actions.filter(act =>
+          availableCardActions.includes(act.key as AvailableCardActionType),
+        );
+      }
+
+      return actions;
+    },
+    [toggleInCartProduct, navigate, availableCardActions],
+  );
+
   return (
     <StyledFlatList
       data={productsWithInCartPopulated}
@@ -75,23 +111,7 @@ const ProductsList: React.FC<Props> = ({
         <ProductCard
           product={product}
           inCart={product.inCart}
-          bottomActions={[
-            {
-              buttonTitle: product.inCart
-                ? 'Remover do carrinho'
-                : 'Adicionar ao carrinho',
-              action: toggleInCartProduct,
-            },
-            {
-              buttonTitle: 'Comprar',
-              action: () => {
-                if (!product.inCart) {
-                  toggleInCartProduct(product);
-                }
-                navigate('Cart');
-              },
-            },
-          ]}
+          bottomActions={getProductCardActions(product)}
         />
       )}
       {...rest}
