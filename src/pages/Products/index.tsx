@@ -70,7 +70,7 @@ const Products: React.FC = () => {
   );
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <Header title="Produtos" />
       <ProductsList
         products={loadedProducts}

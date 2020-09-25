@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { lighten, darken } from 'polished';
+import { lighten } from 'polished';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import { colors } from '../../styles';
@@ -73,7 +73,6 @@ export const RatingIcon = styled(Icon).attrs(() => ({
 }))``;
 
 export const BuyContainer = styled.View`
-  flex: 1;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
