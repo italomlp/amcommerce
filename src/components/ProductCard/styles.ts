@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import { colors } from '../../styles';
 
-export const Container = styled.View`
+export const Container = styled.TouchableOpacity`
   margin: 8px;
   border-color: ${colors.secondary};
   border-width: 1px;

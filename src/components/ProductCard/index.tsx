@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { Product } from '../../models/Product';
 
 import {
@@ -36,8 +37,10 @@ const ProductCard: React.FC<Props> = ({ product, inCart, bottomActions }) => {
     return (1 - product.discount) * product.price;
   }, [product]);
 
+  const { navigate } = useNavigation();
+
   return (
-    <Container>
+    <Container onPress={() => navigate('ProductDetail', { product })}>
       <ImageContainer>
         <Image source={{ uri: product.images[0].uri }} />
       </ImageContainer>

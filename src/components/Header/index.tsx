@@ -1,4 +1,5 @@
 import React from 'react';
+import { StyleProp, ViewStyle } from 'react-native';
 
 import {
   Container,
@@ -11,11 +12,12 @@ import {
 type Props = {
   title: string;
   description?: string;
+  style?: StyleProp<ViewStyle>;
 };
 
-const Header: React.FC<Props> = ({ title, description }) => {
+const Header: React.FC<Props> = ({ title, description, style }) => {
   return (
-    <Container>
+    <Container style={style}>
       <TitleContainer>
         <Title>{title}</Title>
       </TitleContainer>
