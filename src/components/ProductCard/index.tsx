@@ -16,18 +16,24 @@ import {
   PriceContainer,
 } from './styles';
 
+type ButtonAction = {
+  buttonTitle: string;
+  action: (_: Product) => unknown;
+};
+
 type Props = {
   product: Product;
   inCart?: boolean;
+  bottomActions?: [ButtonAction] | [ButtonAction, ButtonAction];
 };
 
-const ProductCard: React.FC<Props> = ({ product, inCart }) => {
+const ProductCard: React.FC<Props> = ({ product, inCart, bottomActions }) => {
   const priceWithDiscount = useMemo(() => {
     if (!product.discount) {
       return 0;
     }
     return (1 - product.discount) * product.price;
-  }, []);
+  }, [product]);
 
   return (
     <Container>
@@ -47,14 +53,15 @@ const ProductCard: React.FC<Props> = ({ product, inCart }) => {
         </PriceContainer>
       </TextContainer>
       <BuyContainer>
-        <BuyButton>
-          <BuyText>
-            {inCart ? 'Remover do carrinho' : 'Adicionar ao carrinho'}
-          </BuyText>
-        </BuyButton>
-        <BuyButton>
-          <BuyText>Comprar</BuyText>
-        </BuyButton>
+        {bottomActions &&
+          bottomActions.map(act => (
+            <BuyButton
+              key={act.buttonTitle}
+              onPress={() => act.action(product)}
+            >
+              <BuyText>{act.buttonTitle}</BuyText>
+            </BuyButton>
+          ))}
       </BuyContainer>
     </Container>
   );

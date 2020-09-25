@@ -4,11 +4,11 @@ import { CartActionCreators, ActionTypes } from './types';
 import { Product } from '../../../models/Product';
 
 export type StateType = {
-  readonly cart: Product[];
+  readonly products: Product[];
 };
 
 const INITIAL_STATE: StateType = {
-  cart: [],
+  products: [],
 };
 
 export default function loading(
@@ -19,16 +19,18 @@ export default function loading(
     switch (action.type) {
       case ActionTypes.ADD_TO_CART: {
         const productToAdd = action.payload.product;
-        if (!draft.cart.find(product => product.id === productToAdd.id)) {
-          draft.cart.push(productToAdd);
+        if (!draft.products.find(product => product.id === productToAdd.id)) {
+          draft.products.push(productToAdd);
         }
         return draft;
       }
       case ActionTypes.REMOVE_FROM_CART: {
         const { id } = action.payload;
-        const productIndex = draft.cart.findIndex(product => product.id === id);
+        const productIndex = draft.products.findIndex(
+          product => product.id === id,
+        );
         if (productIndex >= 0) {
-          draft.cart.splice(productIndex, 1);
+          draft.products.splice(productIndex, 1);
         }
         return draft;
       }
