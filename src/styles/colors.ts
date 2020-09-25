@@ -3,6 +3,7 @@ const colors = {
   primary: '#ff6347',
   secondary: '#29339B',
   tertiary: '#6DD3CE',
+  active: '#ff2222',
 
   // status
   error: '#A41B1B',
@@ -12,6 +13,7 @@ const colors = {
 
   // neutral
   lightText: '#EDEDED',
+  darkText: '#5c5c5c',
   white: '#FFFDFD',
   black: '#000',
 };
