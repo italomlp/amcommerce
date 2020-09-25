@@ -1,9 +1,14 @@
 import React from 'react';
-import { Text } from 'react-native';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+import { colors } from '../styles';
+
+import Cart from '../pages/Cart';
+
+import ProductsNavigator from './products';
 
 const TabNavigator = createBottomTabNavigator();
 
@@ -15,13 +20,13 @@ const AppRouter: React.FC = () => {
           paddingBottom: 6,
           fontSize: 12,
         },
-        activeTintColor: 'tomato',
-        inactiveTintColor: 'gray',
+        activeTintColor: colors.primary,
+        inactiveTintColor: colors.inactive,
       }}
     >
       <TabNavigator.Screen
         name="Products"
-        component={() => <Text>Products</Text>}
+        component={ProductsNavigator}
         options={{
           title: 'Produtos',
           tabBarIcon: props => <Ionicons name="search" {...props} />,
@@ -29,7 +34,7 @@ const AppRouter: React.FC = () => {
       />
       <TabNavigator.Screen
         name="Cart"
-        component={() => <Text>Cart</Text>}
+        component={Cart}
         options={{
           title: 'Carrinho',
           tabBarIcon: props => <Ionicons name="cart" {...props} />,
