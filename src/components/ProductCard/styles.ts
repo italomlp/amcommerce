@@ -16,15 +16,21 @@ export const Container = styled.View`
   shadow-opacity: 0.3;
   shadow-radius: 4.65px;
   elevation: 8;
-  /* flex-direction: row;
-  height: 100px; */
 `;
 
-export const ImageContainer = styled.View``;
+export const ImageContainer = styled.View`
+  width: 100%;
+  height: 200px;
+  max-height: 200px;
+  background-color: red;
+`;
 
-export const Image = styled.Image`
-  flex: 1;
-  aspect-ratio: 1;
+export const Image = styled.Image.attrs(() => ({
+  height: 200,
+  width: '100%',
+}))`
+  height: 200px;
+  width: 100%;
 `;
 
 export const TextContainer = styled.View`

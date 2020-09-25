@@ -49,6 +49,16 @@ export const Input = styled(AppInput)`
 
 export const Button = styled(AppButton)``;
 
+export const LoadMoreButtonContainer = styled.View`
+  align-items: center;
+  justify-content: center;
+  margin: 8px 0;
+`;
+
+export const LoadMoreButton = styled(AppButton).attrs(() => ({
+  color: 'secondary',
+}))``;
+
 export const Loading = styled.ActivityIndicator.attrs(() => ({
   color: colors.primary,
   size: 24,

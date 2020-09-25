@@ -15,34 +15,48 @@ import {
   OrderByContainer,
   OrderByDescription,
   OrderByLineSeparator,
+  LoadMoreButton,
+  LoadMoreButtonContainer,
 } from './styles';
 
 const Products: React.FC = () => {
   const [loadedProducts, setLoadedProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(false);
+  const [pageLoading, setPageLoading] = useState(false);
   const [searchText, setSearchText] = useState('');
   const [orderBy, setOrderBy] = useState<'price_asc' | 'price_desc' | ''>('');
   const [currentPage, setCurrentPage] = useState(1);
   const [error, setError] = useState('');
 
-  const loadProducts = useCallback(async () => {
-    try {
-      setLoading(true);
-      const response = await listProducts({
-        searchText,
-        orderBy: orderBy || undefined,
-      });
-      const products = response.data;
-      setLoadedProducts(products);
-    } catch (err) {
-      console.log('error', err);
-      setError(
-        'Ocorreu um erro ao carregar os produtos :(\nPor favor, tente novamente em instantes',
-      );
-    } finally {
-      setLoading(false);
-    }
-  }, [searchText, orderBy]);
+  const loadProducts = useCallback(
+    async (page?: number) => {
+      try {
+        if (page) {
+          setPageLoading(true);
+        } else {
+          setCurrentPage(1);
+          setLoading(true);
+        }
+        const response = await listProducts({
+          searchText,
+          orderBy: orderBy || undefined,
+          page,
+        });
+        setLoadedProducts(prevProducts =>
+          page ? [...prevProducts, ...response.data] : response.data,
+        );
+      } catch (err) {
+        console.log('error', err);
+        setError(
+          'Ocorreu um erro ao carregar os produtos :(\nPor favor, tente novamente em instantes',
+        );
+      } finally {
+        setLoading(false);
+        setPageLoading(false);
+      }
+    },
+    [searchText, orderBy],
+  );
 
   useEffect(() => {
     loadProducts();
@@ -105,6 +119,24 @@ const Products: React.FC = () => {
             {loading && <Loading />}
           </>
         }
+        ListFooterComponent={() => (
+          <>
+            {pageLoading ? (
+              <Loading />
+            ) : (
+              <LoadMoreButtonContainer>
+                <LoadMoreButton
+                  title="Carregar mais"
+                  onPress={() => {
+                    const nextPage = currentPage + 1;
+                    loadProducts(nextPage);
+                    setCurrentPage(nextPage);
+                  }}
+                />
+              </LoadMoreButtonContainer>
+            )}
+          </>
+        )}
       />
     </SafeAreaView>
   );
