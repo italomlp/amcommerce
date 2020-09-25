@@ -1,5 +1,4 @@
 module.exports = {
-  root: true,
   env: {
     es6: true,
   },
@@ -17,8 +16,6 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
   },
   parser: '@typescript-eslint/parser',
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
