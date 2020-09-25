@@ -1,17 +1,25 @@
 import 'react-native-gesture-handler';
 
 import React from 'react';
-import { Text } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
 
+import { PersistGate } from 'redux-persist/es/integration/react';
+import { Provider } from 'react-redux';
+
 import AppRouter from './routes';
+
+import { persistor, store } from './store';
 
 const App: React.FC = () => {
   return (
-    <NavigationContainer>
-      <AppRouter />
-    </NavigationContainer>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <NavigationContainer>
+          <AppRouter />
+        </NavigationContainer>
+      </PersistGate>
+    </Provider>
   );
 };
 
