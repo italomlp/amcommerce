@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { View, FlatList, SafeAreaView } from 'react-native';
-import { Header, ProductCard } from '../../components';
+import { SafeAreaView } from 'react-native';
+import { Header, ProductsList } from '../../components';
 import { Product } from '../../models/Product';
 import { listProducts } from '../../services/products';
 
@@ -29,11 +29,9 @@ const Products: React.FC = () => {
 
   return (
     <SafeAreaView>
-      <Header title="Produtos" />
-      <FlatList
-        data={loadedProducts}
-        renderItem={({ item: product }) => <ProductCard product={product} />}
-        keyExtractor={product => String(product.id)}
+      <ProductsList
+        products={loadedProducts}
+        topComponent={<Header title="Produtos" />}
       />
     </SafeAreaView>
   );
