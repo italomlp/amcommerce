@@ -1,0 +1,444 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Produto 1",
+      "description": "Essa é a descrição do Produto 1.",
+      "price": 20,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=11",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=12"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=13"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Produto 2",
+      "description": "Essa é a descrição do Produto 2.",
+      "price": 10,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=21",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=22"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=23"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Produto 3",
+      "description": "Essa é a descrição do Produto 3.",
+      "price": 30,
+      "discount": 0.1,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=31",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=32"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=33"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Produto 4",
+      "description": "Essa é a descrição do Produto 4.",
+      "price": 20,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=41",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=42"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=43"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Produto 5",
+      "description": "Essa é a descrição do Produto 5.",
+      "price": 20,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=51",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=52"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=53"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Produto 6",
+      "description": "Essa é a descrição do Produto 6.",
+      "price": 20,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=61",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=62"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=63"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Produto 7",
+      "description": "Essa é a descrição do Produto 7.",
+      "price": 20,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=71",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=72"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=73"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Produto 8",
+      "description": "Essa é a descrição do Produto 8.",
+      "price": 20,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=81",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=82"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=83"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Produto 9",
+      "description": "Essa é a descrição do Produto 9.",
+      "price": 20,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=91",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=92"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=93"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Produto 10",
+      "description": "Essa é a descrição do Produto 10.",
+      "price": 20,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=101",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=102"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=103"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Produto 11",
+      "description": "Essa é a descrição do Produto 11.",
+      "price": 20,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=111",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=112"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=113"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Produto 12",
+      "description": "Essa é a descrição do Produto 12.",
+      "price": 20,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=121",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=122"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=123"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Produto 13",
+      "description": "Essa é a descrição do Produto 13.",
+      "price": 20,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=131",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=132"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=133"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Produto 14",
+      "description": "Essa é a descrição do Produto 14.",
+      "price": 20,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=141",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=142"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=143"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Produto 15",
+      "description": "Essa é a descrição do Produto 15.",
+      "price": 20,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=151",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=152"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=153"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Produto 16",
+      "description": "Essa é a descrição do Produto 16.",
+      "price": 20,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=161",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=162"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=163"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Produto 17",
+      "description": "Essa é a descrição do Produto 17.",
+      "price": 20,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=171",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=172"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=173"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Produto 18",
+      "description": "Essa é a descrição do Produto 18.",
+      "price": 20,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=181",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=182"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=183"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Produto 19",
+      "description": "Essa é a descrição do Produto 19.",
+      "price": 20,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=191",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=192"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=193"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Produto 20",
+      "description": "Essa é a descrição do Produto 20.",
+      "price": 20,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=201",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=202"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=203"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "Produto 21",
+      "description": "Essa é a descrição do Produto 21.",
+      "price": 20,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=211",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=212"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=213"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Produto 22",
+      "description": "Essa é a descrição do Produto 22.",
+      "price": 20,
+      "discount": 0,
+      "rating": 4.5,
+      "images": [
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=221",
+          "main": true
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=222"
+        },
+        {
+          "uri": "https://loremflickr.com/320/240/product?random=223"
+        }
+      ]
+    }
+  ]
+}
