@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 
+import cart, { StateType as CartState } from './cart/reducer';
+
 export type RootReducer = {
-  example: null;
+  cart: CartState;
 };
 
 export default combineReducers<RootReducer>({
-  example: () => null,
+  cart,
 });

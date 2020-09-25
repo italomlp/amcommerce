@@ -9,7 +9,7 @@ import rootReducer from './modules/rootReducer';
 const middlewares: Middleware[] = [];
 
 const store = createStore(
-  persistReducers('@amcommerce', rootReducer, []),
+  persistReducers('@amcommerce', rootReducer, ['cart']),
   middlewares,
 );
 
